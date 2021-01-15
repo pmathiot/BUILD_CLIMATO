@@ -1,0 +1,4 @@
+Feb 2016 : New version to support thickness-weighted time-meaning for models
+           with time-varying cell thicknesses. Currently involves using a 
+           python wrapper script to set the cell_methods attribute prior to 
+           calling the updated version of mean_nemo.exe. Dave Storkey
