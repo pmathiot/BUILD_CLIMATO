@@ -1,6 +1,6 @@
 #!/bin/bash
 #===========================================
-if [[ $# -ne 4 ]]; then echo "mk_climato_v5.bash [CONFIG] [CASE] [YEARB] [YEARE]"; exit; fi
+if [[ $# -ne 4 ]]; then echo "build_climato.bash [CONFIG] [CASE] [YEARB] [YEARE]"; exit; fi
 ulimit -s unlimited
 CONFIG=$1
 CASE=$2
