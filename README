@@ -1,10 +1,10 @@
 ### BUILD_CLIMATO 
 
-== Purpose ==
+## Purpose
 
 The only purpose of the BUILD_CLIMATO tool is to build multiyear mean from NEMO output
 
-== Usage ==
+## Usage
 
 Once set up, the usage is very simple:
 
@@ -16,7 +16,7 @@ for example:
 ./build_climato.bash eORCA025.L121 OPM006 2009 2018
 ```
 
-== How to set it up ==
+## How to set it up
 
 - step 1: compile the f90 tools in src/f90 (modify the Makefile to fit your HPC architecture, default is CINES Occigen computer)
 - step 2: modify the param.bash file
