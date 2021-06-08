@@ -3,7 +3,7 @@
 #SBATCH --nodes=1
 ##SBATCH --ntasks=13
 ##SBATCH --ntasks-per-node=24
-#SBATCH --constraint HSW24
+#SBATCH --constraint BDW28
 #SBATCH --threads-per-core=1
 #SBATCH --time=01:00:00
 #SBATCH --exclusive

@@ -1,12 +1,15 @@
 #!/bin/bash
 
-module load intel/17.0 intelmpi/2017.0.098 hdf5/1.8.17 netcdf/4.4.0_fortran-4.4.2
+. ~/bin/load_intelmodule_2019.4.sh 
 
 # where original data are store
 STOPATH=${SCRATCHDIR}/DRAKKAR/${CONFIG}/${RUNID}-S/
 
 # where the processing is done
 WRKPATH=${SCRATCHDIR}/BUILD_CLIMATO/${RUNID}/
+
+# where the climatological mean should be store
+MEANPATH=${SCRATCHDIR}/DRAKKAR/${CONFIG}/${RUNID}-MEAN/
 
 # grid (update it for your need)
 GRID_LST='gridT gridU gridV gridW flxT icemod'
