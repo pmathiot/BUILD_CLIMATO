@@ -33,17 +33,16 @@ for GRID in $GRID_LST; do
     if [[ $nit -gt 180 ]]; then 
        echo 'too much iteration, exit'
        if [ -f ${TRIGGER} ]; then rm ${TRIGGER} ; fi
-       exit
+       exit 42
     fi
 done
 
 for GRID in $GRID_LST; do
     TRIGGER=`get_triggername`
-    echo $TRIGGER
     while [[ -f $TRIGGER && $nit -le 180 ]]; do
       sleep 60
       nit=$((nit+1))
     done
-    $BUILD_DIR/src/bash/put_mean_data.bash $CONFIG $CASE $YEARB $YEARE
+    $BUILD_DIR/src/bash/put_mean_data.bash $RUNID $GRID $YEARB $YEARE
 done
 #===========================================
