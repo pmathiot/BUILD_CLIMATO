@@ -19,10 +19,11 @@ move_files()
    echo ''
 }
 
-RUNID=$1
-GRID=$2
-YEARB=$3
-YEARE=$4
+CONFIG=$1
+RUNID=$2
+GRID=$3
+YEARB=$4
+YEARE=$5
 BUILD_DIR=`pwd`
 
 . param.bash

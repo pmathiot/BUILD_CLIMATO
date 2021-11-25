@@ -41,8 +41,9 @@ for GRID in $GRID_LST; do
     TRIGGER=`get_triggername`
     while [[ -f $TRIGGER && $nit -le 180 ]]; do
       sleep 60
+      printf '='
       nit=$((nit+1))
     done
-    $BUILD_DIR/src/bash/put_mean_data.bash $RUNID $GRID $YEARB $YEARE
+    $BUILD_DIR/src/bash/put_mean_data.bash $CONFIG $RUNID $GRID $YEARB $YEARE
 done
 #===========================================
