@@ -8,6 +8,16 @@
 #SBATCH --time=01:00:00
 #SBATCH --exclusive
 
+##MSUB -r zmergxios.95
+#MSUB -n 64
+#MSUB -x
+#MSUB -T 7200
+#MSUB -q rome
+##MSUB -o build_climato.o%I
+##MSUB -e build_climato.e%I
+#MSUB -A gen6035
+#MSUB -m store,scratch,work,workflash
+
 
 trap "exit 1" TERM
 export TOP_PID=$$
@@ -82,10 +92,10 @@ function build_mean {
       fi
 }
 
-RUNID=$1
-GRID=$2
-YEARB=$3
-YEARE=$4
+RUNID=<RUNID>
+GRID=<GRID>
+YEARB=<YEARB>
+YEARE=<YEARE>
 
 BUILD_DIR=`pwd`
 echo $BUILD_DIR

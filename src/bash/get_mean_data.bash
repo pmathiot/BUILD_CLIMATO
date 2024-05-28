@@ -85,5 +85,7 @@ echo ''
 echo 'start averaging ...'
 echo ''
 
-sbatch -J mym_$GRID -o ${LOGPATH}/mym_${GRID}.out -e ${LOGPATH}/mym_${GRID}.err $BUILD_DIR/src/bash/schedul_monthly_mean.bash $RUNID $GRID $YEARB $YEARE 
+#sbatch -J mym_$GRID -o ${LOGPATH}/mym_${GRID}.out -e ${LOGPATH}/mym_${GRID}.err $BUILD_DIR/src/bash/schedul_monthly_mean.bash $RUNID $GRID $YEARB $YEARE 
+sed -e "s/<RUNID>/$RUNID/" -e "s/<GRID>/$GRID/" -e "s/<YEARB>/$YEARB/" -e "s/<YEARE>/$YEARE/" $BUILD_DIR/src/bash/schedul_monthly_mean.bash > $BUILD_DIR/schedul_monthly_mean_${RUNID}_${GRID}_${YEARB}_${YEARE}.bash
+ccc_msub -r mym_$GRID -o ${LOGPATH}/mym_${GRID}.out -e ${LOGPATH}/mym_${GRID}.err $BUILD_DIR/schedul_monthly_mean_${RUNID}_${GRID}_${YEARB}_${YEARE}.bash
 

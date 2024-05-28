@@ -1,6 +1,9 @@
 #!/bin/bash
 
-. ~/bin/load_intelmodule_2019.4.sh 
+#. ~/bin/load_intelmodule_2019.4.sh 
+. ~/bin/load_intel_netcdf.bash
+
+SCRATCHDIR=$CCCSCRATCHDIR
 
 # where original data are store
 STOPATH=${SCRATCHDIR}/DRAKKAR/${CONFIG}/${RUNID}-S/
